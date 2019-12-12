@@ -1,4 +1,7 @@
 package mk.finki.ukim.mk.lab.repository;
 
-public interface IngredientsRepository {
+import mk.finki.ukim.mk.lab.model.Ingredient;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface IngredientsRepository extends JpaRepository<Ingredient, String> {
 }

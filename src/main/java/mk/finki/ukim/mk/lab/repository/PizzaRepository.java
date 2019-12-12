@@ -1,4 +1,8 @@
 package mk.finki.ukim.mk.lab.repository;
 
-public interface PizzaRepository {
+import mk.finki.ukim.mk.lab.model.Ingredient;
+import mk.finki.ukim.mk.lab.model.Pizza;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface PizzaRepository extends JpaRepository<Pizza, String> {
 }

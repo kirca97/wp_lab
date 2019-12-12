@@ -7,8 +7,8 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 
 //@EnableAutoConfiguration(exclude = {DataSourceAutoConfiguration.class})
-@SpringBootApplication(exclude={DataSourceAutoConfiguration.class})
-@ServletComponentScan
+@SpringBootApplication
+//@ServletComponentScan
 public class LabApplication {
 
     public static void main(String[] args) {

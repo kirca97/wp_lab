@@ -7,10 +7,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Repository
-public class PizzaRepository {
+public class PizzaRepositoryFromLab1 {
      private List<Pizza> allPizzas;
 
-     public PizzaRepository() {
+     public PizzaRepositoryFromLab1() {
          this.allPizzas = new ArrayList<>();
          this.allPizzas.add(new Pizza("Margherita", "tomato sauce, mozzarella"));
          this.allPizzas.add(new Pizza("Carbonara", "fresh cream, mozzarella, bacon"));
