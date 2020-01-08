@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000")
 public class PizzasController {
 
 
@@ -16,13 +17,13 @@ public class PizzasController {
     private PizzasService pizzasService;
 
     @PostMapping("/pizzas")
-    public Pizza createPizza(@RequestBody Pizza pizza) {
-        return pizzasService.save(pizza);
+    public Pizza createPizza(@RequestBody PizzaDTO pizzaDTO) {
+        return pizzasService.save(pizzaDTO);
     }
 
     @PutMapping("/pizzas/{id}")
-    public Pizza editPizza(@PathVariable String id, @RequestBody Pizza pizza) {
-        return pizzasService.edit(id, pizza);
+    public Pizza editPizza(@PathVariable String id, @RequestBody PizzaDTO pizzaDTO) {
+        return pizzasService.edit(id, pizzaDTO);
     }
 
     @DeleteMapping("/pizzas/{id}")
@@ -36,7 +37,7 @@ public class PizzasController {
     }
 
     @GetMapping("/pizzas/{id}")
-    public Pizza getPizza(@PathVariable String id) {
+    public Pizza getPizza(@PathVariable String id) throws Exception {
         return pizzasService.getPizza(id);
     }
 }
